@@ -4,3 +4,8 @@ docker cp data.csv hadoop-hive-namenode-1:/archivo.csv
 
 
 docker-compose exec hadoop-hive-namenode-1 bash
+
+docker exec -it hadoop-hive-namenode-1 sh
+
+LOAD DATA INPATH 'hdfs:///data/archivo.csv' INTO TABLE branch_data;
+
